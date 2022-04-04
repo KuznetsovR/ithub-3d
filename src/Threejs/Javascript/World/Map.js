@@ -19,6 +19,20 @@ export default class Map {
   }
   setStatic() {
     this.objects.add({
+      base: this.resources.items.priem.scene,
+      collision: this.resources.items.priemCollision.scene,
+      floorShadowTexture: null,
+      offset: new THREE.Vector3(0, 0, 0),
+      mass: 0,
+    });
+    this.objects.add({
+      base: this.resources.items.about.scene,
+      collision: this.resources.items.aboutCollision.scene,
+      floorShadowTexture: null,
+      offset: new THREE.Vector3(0, 0, 0),
+      mass: 0,
+    });
+    this.objects.add({
       base: this.resources.items.MapModel.scene,
       collision: this.resources.items.MainMapCollision.scene,
       floorShadowTexture: null,
@@ -86,6 +100,46 @@ export default class Map {
     });
   }
   setDynamic() {
+    this.objects.add({
+      base: this.resources.items.dino.scene,
+      collision: this.resources.items.dinoCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 1,
+    });
+    this.objects.add({
+      base: this.resources.items.cactus.scene,
+      collision: this.resources.items.cactusCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 0.7,
+    });
+    this.objects.add({
+      base: this.resources.items.dino.scene,
+      collision: this.resources.items.dinoCollision.scene,
+      offset: new THREE.Vector3(-13, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 1,
+    });
+    this.objects.add({
+      base: this.resources.items.cactus.scene,
+      collision: this.resources.items.cactusCollision.scene,
+      offset: new THREE.Vector3(4, -1, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 0.7,
+    });
+    this.objects.add({
+      base: this.resources.items.cactus.scene,
+      collision: this.resources.items.cactusCollision.scene,
+      offset: new THREE.Vector3(-9.25, -1, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 0.7,
+    });
     this.objects.add({
       base: this.resources.items.system.scene,
       collision: this.resources.items.systemCollision.scene,

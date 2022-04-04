@@ -56,8 +56,56 @@ import specialtyText from '../Models/Text/specialty/specialty.glb'
 import specialtyCollision from '../Models/Text/specialty/specialtyCollision.glb'
 import system from '../Models/decorations/system/system.glb'
 import systemCollision from '../Models/decorations/system/systemCollision.glb'
+import about from '../Models/Text/about/about.glb'
+import aboutCollision from '../Models/Text/about/aboutCollision.glb'
+import priem from '../Models/Text/priem/priem.glb'
+import priemCollision from '../Models/Text/priem/priemCollision.glb'
+import cactus from '../Models/decorations/cactus/cactus.glb'
+import cactusCollision from '../Models/decorations/cactus/cactusCollision.glb'
+import dino from '../Models/decorations/dino/dino.glb'
+import dinoCollision from '../Models/decorations/dino/dinoCollision.glb'
 
 const sources = [
+  {
+    name: 'dino',
+    type: 'gltfModel',
+    path: dino,
+  },
+  {
+    name: 'dinoCollision',
+    type: 'gltfModel',
+    path: dinoCollision,
+  },
+  {
+    name: 'cactus',
+    type: 'gltfModel',
+    path: cactus,
+  },
+  {
+    name: 'cactusCollision',
+    type: 'gltfModel',
+    path: cactusCollision,
+  },
+  {
+    name: 'priem',
+    type: 'gltfModel',
+    path: priem,
+  },
+  {
+    name: 'priemCollision',
+    type: 'gltfModel',
+    path: priemCollision,
+  },
+  {
+    name: 'about',
+    type: 'gltfModel',
+    path: about,
+  },
+  {
+    name: 'aboutCollision',
+    type: 'gltfModel',
+    path: aboutCollision,
+  },
   {
     name: 'system',
     type: 'gltfModel',
