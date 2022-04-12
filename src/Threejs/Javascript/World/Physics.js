@@ -148,10 +148,11 @@ export default class Physics {
         body: new CANNON.Body({ mass: this.skate.options.mass }),
       };
       this.skate.chassis.body.allowSleep = false;
-      this.skate.chassis.body.position.set(0, 0, 4);
+      this.skate.chassis.body.position.set(0, 0, 2);
+
       // this.skate.chassis.body.sleep();
       this.skate.chassis.body.addShape(this.skate.chassis.shape, this.skate.options.offset);
-      this.skate.chassis.body.quaternion.setFromAxisAngle(new CANNON.Vec3(0, 0, 1), -Math.PI * 0.5);
+      this.skate.chassis.body.quaternion.setFromAxisAngle(new CANNON.Vec3(0, 0, 1), Math.PI * 0.75);
 
       /**
        * Vehicle
