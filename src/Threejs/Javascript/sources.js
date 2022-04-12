@@ -1,3 +1,4 @@
+import PortalTexture from '../Textures/portal.png'
 import MapSource from '../Models/Map/MainMap.glb'
 import SkateSource from '../Models/Skate/Skate.glb'
 import MainMapCollision from '../Models/Map/MainMapCollision.glb'
@@ -66,6 +67,11 @@ import dino from '../Models/decorations/dino/dino.glb'
 import dinoCollision from '../Models/decorations/dino/dinoCollision.glb'
 
 const sources = [
+  {
+    name: 'PortalTexture',
+    type: 'texture',
+    path: PortalTexture,
+  },
   {
     name: 'dino',
     type: 'gltfModel',
