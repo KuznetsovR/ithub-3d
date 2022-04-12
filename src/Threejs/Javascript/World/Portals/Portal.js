@@ -8,6 +8,7 @@ export default class Portal extends EventEmitter {
     this.world = new World();
     this.mainHero = this.world.mainHero;
     this.time = this.world.time;
+    this.resources = this.world.resources;
 
     this.url = url;
     this.position = position;
@@ -28,6 +29,21 @@ export default class Portal extends EventEmitter {
 
     this.setTimer();
     this.observeSkate();
+    this.createPortal()
+  }
+  createPortal(){
+    this.portal = {
+      geometry: new THREE.PlaneGeometry(this.size, this.size),
+      material: new THREE.MeshStandardMaterial({ map: this.resources.items.PortalTexture, transparent: true, roughness: 0.5 }),
+    };
+    this.portal.mesh = new THREE.Mesh(this.portal.geometry, this.portal.material);
+    this.portal.mesh.position.set(0,0,0.1)
+
+    this.time.on('tick', ()=>{
+      this.portal.mesh.rotation.set(0,0,Math.PI * Math.sin(this.time.elapsed / 1000))
+    })
+
+    this.container.add(this.portal.mesh);
   }
 
   setTimer() {
