@@ -20,7 +20,7 @@ export default class Portal extends EventEmitter {
     this.container = new THREE.Object3D();
     this.container.position.x = this.position.x;
     this.container.position.y = this.position.y;
-    this.container.position.z = 0.1;
+    this.container.position.z = -0.08;
     this.container.matrixAutoUpdate = false;
     this.container.updateMatrix();
 
